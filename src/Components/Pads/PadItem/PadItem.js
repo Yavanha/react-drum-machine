@@ -6,9 +6,9 @@ export default class PadItem extends React.PureComponent {
 
     render() {
         return (
-            <div className="pad-item">
+            <article className="pad-item">
                 {this.props.letter}
-            </div>
+            </article>
         )
     }
 }

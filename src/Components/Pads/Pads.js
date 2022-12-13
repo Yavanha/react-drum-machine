@@ -22,7 +22,7 @@ export default class Pads extends React.Component {
     render() {
         return (
             <div className="pads">
-                {this.padsElement}
+              {this.padsElement}
             </div>
         )
     }

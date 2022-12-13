@@ -2,8 +2,10 @@
     background-color: var(--ligh-grey);
     display: flex;
     outline: .5rem solid orange; 
+    flex-wrap: wrap;
 }
 
-.drum-machine > * {
-    flex: 1
+.drum-bar {
+    flex: 0 0 100%;
+    text-align: right;
 }

@@ -61,7 +61,13 @@ export default class DrumMachine extends React.Component {
 
     render() {
         return (<div className="drum-machine">
-            <Pads pads={this.state.pads}/>
+            <header className="drum-bar"><a class="git-link" href="" >Made by y4rb0w</a></header>
+            <div className="left-panel">
+                <Pads pads={this.state.pads}/>
+            </div>
+            <div className="right-panel">
+                    hello world
+            </div>
         </div>)
     }
 
