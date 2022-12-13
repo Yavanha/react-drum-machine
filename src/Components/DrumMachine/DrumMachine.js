@@ -8,7 +8,7 @@ export default class DrumMachine extends React.Component {
         super(props)
         this.state = {
             isOn: true,
-            volumne: 0.3,
+            volume: 0.3,
             pads: [
                 {
                     name: 'Heater 1',
@@ -61,12 +61,14 @@ export default class DrumMachine extends React.Component {
 
     render() {
         return (<div className="drum-machine">
-            <header className="drum-bar"><a class="git-link" href="" >Made by y4rb0w</a></header>
+            <header className="drum-bar">
+                <a className="git-link" target="_blank" href="https://github.com/Yavanha" >Made by y4rb0w</a>
+            </header>
             <div className="left-panel">
-                <Pads pads={this.state.pads}/>
+                <Pads pads={this.state.pads} volume={this.state.volume} />
             </div>
             <div className="right-panel">
-                    hello world
+                
             </div>
         </div>)
     }

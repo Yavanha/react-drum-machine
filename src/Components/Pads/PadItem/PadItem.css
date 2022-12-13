@@ -5,4 +5,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: black .3rem .3rem .5rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    font-weight: bold;
+    user-select: none;
+}
+
+.pad-item:active {
+    background-color: orange;
+    box-shadow: none;;
 }

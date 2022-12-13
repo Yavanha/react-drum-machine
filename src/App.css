@@ -3,6 +3,7 @@
 ::before {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
@@ -17,6 +18,7 @@ html {
 body {
   font-size: 1.6rem;
   font-family: sans-serif;
+  box-sizing: inherit;
 }
 
 a {

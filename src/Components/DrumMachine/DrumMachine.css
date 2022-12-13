@@ -3,9 +3,29 @@
     display: flex;
     outline: .5rem solid orange; 
     flex-wrap: wrap;
+    gap: 2rem
 }
+
+
 
 .drum-bar {
     flex: 0 0 100%;
-    text-align: right;
+    display: flex;
+    
+    justify-content: flex-end;
+    padding: 2rem;
+}
+
+.git-link {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+
+
+
+.left-panel,
+.right-panel { 
+    padding: 2rem;
+    padding-top: 0;
 }
