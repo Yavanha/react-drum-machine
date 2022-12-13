@@ -24,6 +24,7 @@ body {
 a {
   text-decoration: none;
 }
+
 .main-container {
   background-color: var(--dark-ligh-grey);
   min-height: 100vh;

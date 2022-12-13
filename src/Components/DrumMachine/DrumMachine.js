@@ -1,11 +1,14 @@
 import "./DrumMachine.css"
 import React from "react"
+//components
 import Pads from "../Pads/Pads"
+import Slider from "../Slider/Slider"
 
 export default class DrumMachine extends React.Component {
 
     constructor(props) {
         super(props)
+        this.onHandleVolume = this.onHandleVolume.bind(this)
         this.state = {
             isOn: true,
             volume: 0.3,
@@ -59,6 +62,14 @@ export default class DrumMachine extends React.Component {
         }
     }
 
+    onHandleVolume(event) {
+        this.setState(state => ({
+            isOn : state.isOn,
+            pads : state.pads,
+            volume : parseInt(event.target.value) / 100
+        }))
+    }
+
     render() {
         return (<div className="drum-machine">
             <header className="drum-bar">
@@ -68,7 +79,7 @@ export default class DrumMachine extends React.Component {
                 <Pads pads={this.state.pads} volume={this.state.volume} />
             </div>
             <div className="right-panel">
-                
+                <Slider volume={this.state.volume} volumeChanged={this.onHandleVolume} />
             </div>
         </div>)
     }

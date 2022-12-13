@@ -22,6 +22,9 @@
 }
 
 
+.right-panel {
+    flex-grow: 1;
+}
 
 
 .left-panel,
