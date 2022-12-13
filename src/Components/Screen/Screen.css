@@ -1,0 +1,10 @@
+.screen {
+    display: flex;
+    justify-content: center;
+    min-height: 10rem;
+    background-color: var(--dark-ligh-grey);
+    align-items: center;
+    font-weight: bold;
+    text-transform: capitalize;
+    border: .5rem solid black;
+}

@@ -8,22 +8,42 @@ export default class Pads extends React.Component {
 
     constructor(props) {
         super(props);
-        this.audioPlay = this.audioPlay.bind(this);
+        this.handleClick = this.handleClick.bind(this);
+        this.handleKeydown = this.handleKeydown.bind(this);
+    
         this.renderPads();
     }
 
-    audioPlay(event) {
-        const id = event.target.id;
-        const audio = this.props.pads[parseInt(id)].sound;
-        audio.volume = this.props.volume;
-        audio.play();
+
+
+    handleClick(event) {
+        const audio = event.target.children[0];
+        const name = event.target.id;
+        this.audioPlay(audio, name);
+  
     }
+
+    audioPlay(audio, name) { 
+        audio.volume = this.props.volume / 100;
+        audio.play();
+        this.props.displayScreen(name)
+    }
+
+
+ss
+    handleKeydown(event) {
+        const pad = this.props.pads.find(pad => pad.letter === event.key);
+        if(pad === undefined) return null;
+        const audio = document.getElementById(pad.letter)
+        this.audioPlay(audio, pad.name)
+        
+     }
+
 
 
     renderPads() {
         const pads = this.props.pads;
-        this.padsElement = pads.map((pad, index) => <PadItem key={index} letter={pad.letter} id={index} play={this.audioPlay}/>)
-        console.log(this.padsElement)
+        this.padsElement = pads.map((pad, index) => <PadItem key={index} pad={pad} play={this.handleClick}/>)
 
     }
 
@@ -33,6 +53,15 @@ export default class Pads extends React.Component {
               {this.padsElement}
             </div>
         )
+    }
+
+    componentDidMount() {
+        window.addEventListener('keydown', this.handleKeydown)
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('keydown', this.handleKeydown)
+
     }
 
 }

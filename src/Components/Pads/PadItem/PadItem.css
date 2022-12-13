@@ -1,4 +1,4 @@
-.pad-item {
+.drum-pad {
     background-color: var(--dark-ligh-grey);
     height: 8rem;
     width: 10rem;
@@ -12,7 +12,7 @@
     user-select: none;
 }
 
-.pad-item:active {
+.drum-pad:active {
     background-color: orange;
     box-shadow: none;;
 }
