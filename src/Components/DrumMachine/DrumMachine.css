@@ -1,0 +1,5 @@
+.drum-machine {
+    background-color: var(--ligh-grey);
+    display: flex;
+    outline: .5rem solid orange; 
+}
