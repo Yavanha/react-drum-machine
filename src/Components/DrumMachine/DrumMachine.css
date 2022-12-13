@@ -5,5 +5,5 @@
 }
 
 .drum-machine > * {
-    flex: 0 0 50%
+    flex: 1
 }

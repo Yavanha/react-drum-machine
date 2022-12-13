@@ -14,7 +14,7 @@ export default class Pads extends React.Component {
 
     renderPads() {
         const pads = this.props.pads;
-        this.padsElement = pads.map((pad, index) => <PadItem key={index} name={pad.name} />)
+        this.padsElement = pads.map((pad, index) => <PadItem key={index} letter={pad.letter} />)
         console.log(this.padsElement)
 
     }
