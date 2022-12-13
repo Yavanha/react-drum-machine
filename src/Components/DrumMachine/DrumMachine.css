@@ -3,3 +3,7 @@
     display: flex;
     outline: .5rem solid orange; 
 }
+
+.drum-machine > * {
+    flex: 0 0 50%
+}

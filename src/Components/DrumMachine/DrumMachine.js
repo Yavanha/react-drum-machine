@@ -1,12 +1,13 @@
 import "./DrumMachine.css"
 import React from "react"
+import Pads from "../Pads/Pads"
 
 export default class DrumMachine extends React.Component {
 
     constructor(props) {
         super(props)
         this.state = {
-            isOn : true,
+            isOn: true,
             volumne: 0.3,
             pads: [
                 {
@@ -60,8 +61,8 @@ export default class DrumMachine extends React.Component {
 
     render() {
         return (<div className="drum-machine">
-        hello world
-    </div>)
+            <Pads pads={this.state.pads}/>
+        </div>)
     }
 
 }

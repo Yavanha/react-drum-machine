@@ -8,7 +8,7 @@ export default class App extends React.Component {
 
   render() {
     return(
-      <main class="main-container">
+      <main className="main-container">
         <DrumMachine />
       </main>
     )
